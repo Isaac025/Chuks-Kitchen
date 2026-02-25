@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import WelcomePage from "./pages/welcome";
+import Welcome from "./pages/Welcome";
 import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
@@ -20,7 +20,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<WelcomePage />} />
+        <Route path="/" element={<Welcome />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/home" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
