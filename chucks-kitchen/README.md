@@ -26,10 +26,112 @@ chucks-kitchen/
 │ ├── App.jsx
 │ ├── index.css
 │ └── main.jsx
-├── tailwind.config.js
 ├── package.json
 └── README.md
 
+index.html
+Main HTML entry file where the React app mounts.
+
+package.json
+Defines project dependencies, scripts, and metadata.
+
+
+vite.config.js
+Vite configuration for fast development and optimized builds.
+
+Source Folder (src/)
+src/
+├── assets/
+├── components/
+├── pages/
+├── context/
+├── App.jsx
+├── main.jsx
+└── index.cssmain.jsx
+Application entry point. Renders the root React component into the DOM and sets up providers.
+
+App.jsx
+Main application layout. Handles routing and shared UI structure (Navbar, Footer, etc.).
+
+index.css
+Global styles and Tailwind base imports.
+
+UI Organization
+assets/
+Stores static resources:
+images
+icons
+logos
+
+components/
+Reusable UI building blocks used across pages:
+Discover
+ChefSpecials
+Hero
+Footer
+NavBar
+MenuCategories
+PopularCategories
+
+This keeps UI consistent and avoids duplication.
+
+pages/
+Route-level screens mapped to URLs:
+
+WelcomePage.jsx → landing screen
+Menu.jsx → food listing
+Home.jsx -> Home Page
+YourCart.jsx → cart interface
+Login.jsx → authentication
+SignUp.jsx → account creation
+SignIn.jsx → account login/signin
+
+
+## 🎨 Design Interpretation
+
+The Figma design was implemented using a component-driven approach in React with TailwindCSS for styling. The goal was to preserve visual hierarchy, spacing, and responsiveness while keeping the codebase scalable and reusable.
+
+### 🧩 Component Mapping
+
+Each major UI block in the design was translated into a reusable React component:
+
+- Navigation and layout → shared layout structure in `App.jsx`
+- Food item cards → reusable card component
+- Menu categories → filterable category component
+- Cart items → structured cart card with quantity controls
+- Pages → mapped directly to React Router routes
+
+This ensured consistent styling and easier maintenance across screens.
+
+---
+
+### 📱 Responsive Implementation
+
+The design included desktop and mobile layouts. Responsiveness was implemented using Tailwind’s mobile-first utilities:
+
+- Vertical stacking on small screens
+- Horizontal layout for desktop cart items
+- Flexible spacing using `flex`, `grid`, and responsive breakpoints
+- Image scaling with fixed aspect ratios
+- Touch-friendly button sizing for mobile devices
+
+---
+
+### 🎯 Visual Accuracy Decisions
+
+To match the design closely:
+
+- Spacing and alignment were recreated using Tailwind spacing scale
+- Typography hierarchy was preserved using font weight and size utilities
+- Color palette was approximated using Tailwind theme values
+- Repeated UI patterns were abstracted into reusable components
+
+Where exact values were not available in the design, consistent design system choices were applied.
+
+---
+
+
+This approach ensures the UI is not only visually accurate but also production-ready.
 
 ---
 
